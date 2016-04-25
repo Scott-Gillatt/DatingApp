@@ -1,0 +1,37 @@
+<html ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body ng-controller="appController">
+    <form class="person-form">
+        <input type="text" placeholder="name" ng-model="newPerson.name">
+        <br/>
+        <input type="number" placeholder="age" ng-model="newPerson.age">
+        <br/>
+        <input type="text" placeholder="gender" ng-model="newPerson.gender">
+        <br/>
+        <input type="number" placeholder="hotness" ng-model="newPerson.hotness">
+        <br/>
+        <button ng-click="addMe()">Add Me</button>
+        <br>
+        <br> {{me}}
+        <br>
+        <br> {{people}}
+    </form>
+    <button ng-click="findMatches()">Matches</button>
+
+    <br>
+    <br> {{matches}}
+    
+    <button onclick="shuffle(numbers)">Shuffle</button> 
+    <button onclick="bubbleSort(numbers)">Sort</button> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+    <script src="app.js"></script>
+    <script src="controller.js"></script>
+</body>
+
+</html>
